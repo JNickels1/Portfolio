@@ -1,0 +1,22 @@
+#about {
+  display: flex;
+  flex-wrap: wrap;
+  margin: auto;
+  padding: 80px 10px;
+}
+
+img {
+  width: 22%;
+  border-radius: 65%;
+  float: left;
+  padding: 1rem;
+}
+
+.card {
+  margin: auto;
+}
+
+.Button{
+  border-radius: 20px;  
+  background-color: aqua;
+}

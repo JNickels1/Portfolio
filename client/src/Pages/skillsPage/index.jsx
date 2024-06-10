@@ -1,8 +1,7 @@
 import React from "react";
 import { BadgeCheckIcon, ChipIcon } from "@heroicons/react/solid";
 
-
-export default function Skills() {
+function SkillsPage() {
   return (
     <section id="skills">
       <div className="container px-5 py-10 mx-auto">
@@ -73,5 +72,7 @@ export default function Skills() {
         </div>
       </div>
     </section>
-  );
-}
+  )
+};
+
+export default SkillsPage;

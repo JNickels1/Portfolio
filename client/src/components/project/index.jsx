@@ -2,6 +2,9 @@ import React from "react";
 import { CodeIcon } from "@heroicons/react/solid";
 
 export default function Project() {
+  
+  const backgroundImg = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTQ_LMxMYhZVY2juhdUcIieUi75iC1YvQYUeg&usqp=CAU"
+
   return (
     <section id="projects" className="text-gray-400 bg-gray-900 body-font ml-10">
       <div className="container px-5 py-10 mx-auto text-center lg:px-40">
@@ -19,7 +22,7 @@ export default function Project() {
         <div className="flex flex-wrap -m-16">
 
           <div className="flex relative mb-2">
-            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTQ_LMxMYhZVY2juhdUcIieUi75iC1YvQYUeg&usqp=CAU" alt="" />
+            <img src={backgroundImg} alt="" />
             <div className="px-8 py-10 relative z-10 w-full border-4 border-gray-800 bg-gray-900 opacity-25 hover:opacity-100 ">
               <h1 className="title-font text-lg font-medium text-white mb-3">
                 Project Title
@@ -29,7 +32,7 @@ export default function Project() {
           </div>
 
           <div className="flex relative mb-2">
-            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTQ_LMxMYhZVY2juhdUcIieUi75iC1YvQYUeg&usqp=CAU" alt="" />
+            <img src={backgroundImg} alt="" />
             <div className="px-8 py-10 relative z-10 w-full border-4 border-gray-800 bg-gray-900 opacity-25 hover:opacity-100 ">
               <h1 className="title-font text-lg font-medium text-white mb-3">
                 Project Title
@@ -39,7 +42,7 @@ export default function Project() {
           </div>
 
           <div className="flex relative">
-            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTQ_LMxMYhZVY2juhdUcIieUi75iC1YvQYUeg&usqp=CAU" alt="" />
+            <img src={backgroundImg} alt="" />
             <div className="px-8 py-10 relative z-10 w-full border-4 border-gray-800 bg-gray-900 opacity-25 hover:opacity-100 ">
               <h1 className="title-font text-lg font-medium text-white mb-3">
                 Project Title
@@ -49,7 +52,7 @@ export default function Project() {
           </div>
 
           <div className="flex relative">
-            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTQ_LMxMYhZVY2juhdUcIieUi75iC1YvQYUeg&usqp=CAU" alt="" />
+            <img src={backgroundImg} alt="" />
             <div className="px-8 py-10 relative z-10 w-full border-4 border-gray-800 bg-gray-900 opacity-25 hover:opacity-100 ">
               <h1 className="title-font text-lg font-medium text-white mb-3">
                 Project Title
@@ -57,8 +60,6 @@ export default function Project() {
               <p className="leading-relaxed">project description</p>
             </div>
           </div>
-
-
         </div>
       </div>
     </section>

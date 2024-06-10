@@ -1,20 +1,21 @@
-import './App.css'
-import About from './components/About';
-import Skills from './components/Skills';
-import Project from './components/project';
-import Contact from './components/contact';
-import Navbar from './components/NavBar';
+import React from 'react';
+import { Route, Routes } from 'react-router-dom';
+import HomePage from './Pages/homePage';
+import SkillsPage from './Pages/skillsPage';
+import './App.css';
+import Header from './components/NavBar';
 
 
-
-export default function App() {
+function App() {
   return (
-    <main className="text-gray-400 bg-gray-900 body-font">
-      <Navbar/>
-      <About />
-      <Skills />
-      <Project />
-      <Contact />
-    </main>
-  );
-}
+    <>
+      <Header />
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/skills" element={<SkillsPage />} />
+      </Routes>
+    </>
+  )
+};
+
+export default App;

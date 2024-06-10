@@ -1,0 +1,37 @@
+nav {
+  display: flex;
+  flex-direction: row;
+  background-image: linear-gradient(to bottom right, #26afc4, #00f978);
+  justify-content: space-around;
+  height: 6em;
+}
+
+#link {
+  display: block;
+  height: max-content;
+  margin: auto;
+  font-size: small;
+}
+
+#name {
+  margin: auto;
+  flex-direction: column;
+
+  height: fit-content;
+  font-size: x-large;
+}
+
+#name:hover {
+  background-color: rgb(206, 225, 210);
+  border-radius: 5px;
+}
+
+#menu:hover {
+  background-color: rgb(206, 225, 210);
+  border-radius: 5px;
+}
+
+#link:hover {
+  background-color: rgb(206, 225, 210);
+  border-radius: 5px;
+}
