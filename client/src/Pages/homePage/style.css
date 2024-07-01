@@ -1,0 +1,87 @@
+/* General Styles */
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: #f8f9fa;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+#about {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  margin: 40px 0;
+  padding: 40px 20px;
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#about img {
+  width: 250px;
+  border-radius: 50%;
+  margin-right: 20px;
+  transition: transform 0.3s ease;
+}
+
+#about img:hover {
+  transform: scale(1.1);
+}
+
+.card {
+  flex: 1;
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card-title {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.card-text {
+  font-size: 1.2rem;
+  margin-bottom: 15px;
+  color: #555;
+}
+
+.button {
+  border-radius: 20px;
+  background-image: linear-gradient(to bottom right, #26afc4, #00f978);
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  display: inline-block;
+  text-align: center;
+  text-decoration: none;
+  font-size: 1rem;
+}
+
+.button:hover {
+  /* background-color: #0088cc; */
+  transform: scale(1.05);
+}
+
+/* Media Queries for Responsive Design */
+@media (max-width: 768px) {
+  #about {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  #about img {
+    margin-right: 0;
+    margin-bottom: 20px;
+  }
+}
