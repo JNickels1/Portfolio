@@ -1,36 +1,158 @@
-import React from "react";
-import { FiGithub } from "react-icons/fi";
-import { IoLogoLinkedin } from "react-icons/io5";
-import { TfiEmail } from "react-icons/tfi";
+import React, { useState } from 'react';
+import emailjs from '@emailjs/browser';
+import './style.css';
 
-export default function Contact() {
-    const git = "https://github.com/JNickels1";
-    const linkedin = "https://www.linkedin.com/in/jaimelieberman/";
-    const gmail = "mailto: NickelsJaime@gmail.com";
+const Contact = () => {
+    const [formData, setFormData] = useState({
+        name: '',
+        email: '',
+        message: '',
+    });
+
+    const handleChange = (e) => {
+        const { name, value } = e.target;
+        setFormData({
+            ...formData,
+            [name]: value,
+        });
+    };
+
+    const handleSubmit = (e) => {
+        e.preventDefault();
+
+        emailjs.sendForm('portfolio', 'portfolio', e.target, {
+            publicKey: 'E30t3DObnkIRuhpjI'
+        })
+            .then((result) => {
+                alert('Message sent successfully!');
+            }, (error) => {
+                alert('Failed to send message, please try again.');
+            });
+
+        setFormData({
+            name: '',
+            email: '',
+            message: '',
+        });
+    };
 
     return (
-        <footer id="contact" className="ml-60 mt-5 auto">
-            <div className="container px-5 py-10 mx-auto flex sm:flex-nowrap flex-wrap">
+        <section id="contact">
+            <h2>Contact Me</h2>
+            <form onSubmit={handleSubmit}>
+                <label htmlFor="name">Name:</label>
+                <input
+                    type="text"
+                    name="name"
+                    id="name"
+                    value={formData.name}
+                    onChange={handleChange}
+                    required
+                />
 
-                <div className="lg:w-1/2 px-6">
-                    <a href={git} target="_blank">
-                        <FiGithub size='46' />
-                    </a>
-                </div>
+                <label htmlFor="email">Email:</label>
+                <input
+                    type="email"
+                    name="email"
+                    id="email"
+                    value={formData.email}
+                    onChange={handleChange}
+                    required
+                />
 
-                <div className="lg:w-1/2 px-6">
-                    <a href={linkedin} target="_blank">
-                        <IoLogoLinkedin size='46' />
-                    </a>
-                </div>
+                <label htmlFor="message">Message:</label>
+                <textarea
+                    name="message"
+                    id="message"
+                    value={formData.message}
+                    onChange={handleChange}
+                    required
+                ></textarea>
 
-                <div className="lg:w-1/2 px-6 mt-4 lg:mt-0">
-                    <a href={gmail} className="text-blue-400 leading-relaxed size-24" target="_blank">
-                        <TfiEmail size='46' />
-                    </a>
-                </div>
-
-            </div>
-        </footer>
-    )
+                <button type="submit">Send Message</button>
+            </form>
+        </section>
+    );
 };
+
+export default Contact;
+
+// import React, { useState } from 'react';
+// import emailjs from '@emailjs/browser';
+// import './style.css';
+// import { Button } from 'bootstrap';
+
+// const Contact = () => {
+//     const [formData, setFormData] = useState({
+//         name: '',
+//         email: '',
+//         message: '',
+//     });
+
+//     const handleChange = (e) => {
+//         const { name, value } = e.target;
+//         setFormData({
+//             ...formData,
+//             [name]: value,
+//         });
+//     };
+
+//     const handleSubmit = (e) => {
+//         e.preventDefault();
+
+//         emailjs.sendForm('portfolio', 'portfolio', e.target, {
+//             publicKey: 'E30t3DObnkIRuhpjI'
+//         })
+//             .then((result) => {
+//                 alert('Message sent successfully!');
+//             }, (error) => {
+//                 alert('Failed to send message, please try again.');
+//             });
+
+//         setFormData({
+//             name: '',
+//             email: '',
+//             message: '',
+//         });
+//     };
+
+//     return (
+//         <section id="contact">
+//             <h2>Contact Me</h2>
+//             <form onSubmit={handleSubmit}>
+//                 <label htmlFor="name">Name:</label>
+//                 <input
+//                     type="text"
+//                     name="name"
+//                     id="name"
+//                     value={formData.name}
+//                     onChange={handleChange}
+//                     required
+//                 />
+
+//                 <label htmlFor="email">Email:</label>
+//                 <input
+//                     type="email"
+//                     name="email"
+//                     id="email"
+//                     value={formData.email}
+//                     onChange={handleChange}
+//                     required
+//                 />
+
+//                 <label htmlFor="message">Message:</label>
+//                 <textarea
+//                     name="message"
+//                     id="message"
+//                     value={formData.message}
+//                     onChange={handleChange}
+//                     required
+//                 ></textarea>
+
+//                 <button type="submit">Send Message</button>
+//             </form>
+//         </section>
+//     );
+// };
+
+// export default Contact;
