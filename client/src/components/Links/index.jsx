@@ -2,6 +2,7 @@ import React from 'react';
 import { FiGithub } from 'react-icons/fi';
 import { IoLogoLinkedin } from 'react-icons/io5';
 import { TfiEmail } from 'react-icons/tfi';
+import './style.css';
 
 const socialLinks = [
   {
@@ -22,17 +23,17 @@ const socialLinks = [
 ];
 
 const LinkItem = ({ href, icon, label }) => (
-  <div className="lg:w-1/2 px-6 mt-4 lg:mt-0">
-    <a href={href} className="text-400 leading-relaxed size-24 " target="_blank" rel="noopener noreferrer" aria-label={label}>
+  <div className="lg:w-1/2 px-4 mt-4 lg:mt-0">
+    <li href={href} className="text-400 leading-relaxed size-24 " target="_blank" rel="noopener noreferrer" aria-label={label}>
       {icon}
-    </a>
+    </li>
   </div>
 );
 
 const Links = () => {
   return (
-    <section id="links">
-      <div className="container px-5 py-10 mx-auto flex sm:flex-nowrap flex-wrap">
+    <section >
+      <div className="mx-auto flex sm:flex-nowrap flex-wrap">
         {socialLinks.map((link, index) => (
           <LinkItem key={index} {...link} />
         ))}
