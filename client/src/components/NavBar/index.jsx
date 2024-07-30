@@ -1,21 +1,18 @@
 import React from 'react';
 import { Container, Nav, Navbar } from 'react-bootstrap';
-
+import 'bootstrap/dist/css/bootstrap.css';
 import './style.css';
 
 function Header() {
   const name = 'Jaime Lieberman';
   return (
-    <Navbar id="nav" fixed="top" bg="dark" variant="dark" expand="lg">
+    <Navbar className="navbar" sticky="top">
       <Container>
-        <Navbar.Brand href="/" id="name">{name}</Navbar.Brand>
-        <Navbar.Toggle aria-controls="basic-navbar-nav" />
-        <Navbar.Collapse id="basic-navbar-nav">
-          <Nav className="ml-auto">
-            <Nav.Link href="skills" id="link">Skills</Nav.Link>
-            <Nav.Link href="contact" id="link">Contact Me</Nav.Link>
-          </Nav>
-        </Navbar.Collapse>
+          <Navbar.Brand href="/" className="navbar-brand" id="name">{name}</Navbar.Brand>
+            <Nav className="ml-auto">
+              <Nav.Link href="skills" className="link">Skills</Nav.Link>
+              <Nav.Link href="contact" className='link'>Contact Me</Nav.Link>
+            </Nav>
       </Container>
     </Navbar>
   );

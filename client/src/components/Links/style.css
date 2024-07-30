@@ -1,0 +1,8 @@
+li{
+  list-style: none;
+}
+
+#links{
+  display: inline-flex;
+  margin: 2px;
+}
