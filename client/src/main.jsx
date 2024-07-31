@@ -5,7 +5,7 @@ import { BrowserRouter } from 'react-router-dom';
 import './index.css';
 import emailjs from '@emailjs/browser';
 
-emailjs.init('E30t3DObnkIRuhpjI');
+emailjs.init('MOmMuWzb-Mz-6a6qx');
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
